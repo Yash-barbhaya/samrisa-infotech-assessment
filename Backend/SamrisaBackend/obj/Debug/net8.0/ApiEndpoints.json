@@ -1,0 +1,18 @@
+[
+  {
+    "ContainingType": "SamrisaBackend.Controllers.BillingController",
+    "Method": "ProcessCheckout",
+    "RelativePath": "api/Billing/checkout",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "SamrisaBackend.Controllers.BillingSubmissionDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

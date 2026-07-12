@@ -1,0 +1,6 @@
+@SamrisaBackend_HostAddress = http://localhost:5251
+
+GET {{SamrisaBackend_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

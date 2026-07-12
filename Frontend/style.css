@@ -1,0 +1,136 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.checkout-container {
+    background: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    width: 400px;
+}
+
+h2 {
+    color: #2c3e50;
+    margin: 0 0 10px 0;
+    font-size: 1.2rem;
+}
+
+.divider {
+    border: 0;
+    height: 2px;
+    background: #3498db;
+    margin-bottom: 20px;
+}
+
+.light-divider {
+    border: 0;
+    height: 1px;
+    background: #e0e0e0;
+    margin: 15px 0;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group label {
+    font-size: 0.85rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.input-group input[type="text"],
+.input-group input[type="email"] {
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.input-group input:focus {
+    border-color: #3498db;
+}
+
+.input-group input.invalid {
+    border-color: #e74c3c;
+    background-color: #fdf2f2;
+}
+
+.error-msg {
+    color: #e74c3c;
+    font-size: 0.75rem;
+    margin-top: 4px;
+    display: none;
+}
+
+.radio-group {
+    display: flex;
+    gap: 15px;
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.total {
+    font-weight: bold;
+    color: #000;
+    font-size: 1rem;
+}
+
+button {
+    width: 100%;
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 15px;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+button:hover {
+    background: #2980b9;
+}
+
+/* Only highlight the field as invalid IF the user has typed something (placeholder is gone) */
+.input-group input:not(:placeholder-shown):invalid {
+    border-color: #e74c3c;
+    background-color: #fdf2f2;
+}
+
+/* Optional: If you want to show a subtle green success border when they type a valid format */
+.input-group input:not(:placeholder-shown):valid {
+    border-color: #27ae60;
+}
+
+.status-msg {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+.status-msg.success { color: #27ae60; }
+.status-msg.error { color: #e74c3c; }
+.status-msg.info { color: #7f8c8d; }

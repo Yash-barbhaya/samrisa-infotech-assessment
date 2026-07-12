@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samrisa Infotech - Checkout</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="checkout-container">
+        <form id="checkoutForm" novalidate>
+            <!-- Billing Address Section -->
+            <div class="form-section">
+                <h2>Billing Address</h2>
+                <hr class="divider">
+                
+                <div class="input-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" placeholder="John Doe">
+                    <span class="error-msg" id="nameError"></span>
+                </div>
+
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="example@mail.com">
+                    <span class="error-msg" id="emailError"></span>
+                </div>
+
+                <div class="input-group">
+                    <label for="address">Address</label>
+                    <input type="text" id="address" placeholder="123 Main St">
+                    <span class="error-msg" id="addressError"></span>
+                </div>
+
+                <div class="input-group">
+                    <label>Pay Via</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="payment" value="Card" checked> Card</label>
+                        <label><input type="radio" name="payment" value="UPI"> UPI</label>
+                        <label><input type="radio" name="payment" value="Cash on Delivery"> Cash on Delivery</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Order Summary Section (Dynamic) -->
+            <div class="summary-section">
+                <h2>Order Summary</h2>
+                <hr class="divider">
+                
+                <!-- Dynamic product items and totals will be injected here by JavaScript -->
+                <div id="dynamicSummaryItems"></div>
+
+                <button type="submit" id="submitBtn">Proceed to Checkout</button>
+            </div>
+
+            <div id="formStatus" class="status-msg"></div>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
